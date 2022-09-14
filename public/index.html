@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="assets/greetings.png" />
+    <title>CryptoChat</title>
+  </head>
+  <body>
+    <section class="msger">
+      <header class="msger-header">
+        <div class="msger-header-title">
+          <i class="fas fa-comment-alt"></i> <h1>CRYPTOCHAT - RSA OVER TCP</h1>
+        </div>
+        <div class="msger-header-options">
+          <span><i class="fas fa-cog"></i></span>
+        </div>
+      </header>
+    
+      <main class="msger-chat" id="msg-chat">
+        <div class="msg left-msg">
+          <div
+           class="msg-img"
+           style="background-image: url('assets/darth-vader.svg')"
+          ></div>
+    
+          <div class="msg-bubble">
+            <div class="msg-info">
+              <div class="msg-info-name">Darth Vader</div>
+              <div class="msg-info-time">12:45</div>
+            </div>
+    
+            <div class="msg-text">
+              There is no good or evil, only power. You are weak.
+            </div>
+          </div>
+        </div>
+    
+        <div class="msg right-msg">
+          <div
+           class="msg-img"
+           style="background-image: url('assets/iron-man.svg')"
+          ></div>
+    
+          <div class="msg-bubble">
+            <div class="msg-info">
+              <div class="msg-info-name">Iron Man</div>
+              <div class="msg-info-time">12:46</div>
+            </div>
+    
+            <div class="msg-text">
+              You require a suit of armour just to stay alive, big guy. Humble yourself when you speak to me.
+            </div>
+          </div>
+        </div>
+      </main>
+    
+      <form id="message_form" class="msger-inputarea">
+        <input type="textarea" id="usermsg" class="msger-input" placeholder="Enter your message...">
+        <button type="submit" class="msger-send-btn">Send</button>
+      </form>
+    </section>
+
+    <!--Javascript files and code to be used-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/bundle.js" type="module"></script>
+    <script>
+      var socket = io();
+    </script>
+  </body>
+</html>
